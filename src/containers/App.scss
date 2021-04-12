@@ -1,0 +1,818 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url('/images/bg_1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* body::after {
+    content: ' ';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    opacity: 0.5;
+}  */
+
+#root {
+    height: 100vh;
+}
+
+//Style
+
+.orange {
+    color: #f15a24;
+}
+
+
+.loading-spinner {
+    padding-top: 40px;
+}
+
+.loading-title {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: white;
+}
+
+.app-wrapper {
+    height: auto;
+}
+
+.page-wrapper {
+    height: auto;
+    flex-wrap: wrap;
+}
+
+// NavBar
+.navbar {
+    background: white;
+    margin-top: 20px;
+    height: 70px;
+}
+
+.navbar-icon {
+    font-size: 28px;
+    color: #F15A24;
+    margin-right: 10px;
+}
+
+.navbar-text {
+    font-size: 28px;
+    color:#F15A24;
+    font-family: 'Exo', sans-serif;
+}
+
+.navbar-menu {
+    font-size: 20px;
+    font-family: 'Exo', sans-serif;
+    margin-bottom: 0;
+}
+
+.navbar-menu a {
+    color:#262626;
+}
+
+.navbar-menu a:hover {
+    color:#757575;
+
+    &.active {
+        color: #b53c10;
+    }
+}
+.nav-link.active {
+    color:  #F15A24;
+}
+
+.login {
+    font-size: 22px;
+
+    &:hover {
+        color: #757575;
+    }
+}
+
+.main-top {
+    background: #00000030;
+    padding-bottom: 130px;
+}
+
+.page-title {
+    color: white;
+    font-size: 36px;
+    padding-top:30px;
+    padding-bottom: 30px;
+    margin-top: 100px;
+    font-family: 'Exo', sans-serif;
+
+    &.main {
+        text-transform: uppercase;
+    }
+}
+
+.main-subtitle {
+    color: white;
+    font-family: 'Exo', sans-serif;
+    font-weight: 300;
+    margin-top: 50px;
+    font-size: 22px;
+}
+
+.subtitle-orange {
+    color: #F15A24;
+}
+
+.loading {
+    color: white;
+}
+
+.features {
+    background:#292929;
+}
+
+.card-features {
+    color: #dee2e6;
+    background:#292929;
+    border: 2px solid #4f4f4f;
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+    .icon-features {
+        width: 55px;
+        border-radius: 50%;
+        height: 55px;
+        border: 2px solid #4f4f4f;
+        margin-top: 20px;
+        font-size: 25px;
+    }
+
+    .text-features {
+        font-family: 'Exo', sans-serif;
+        font-weight: 300;
+        color: #dee2e6;
+    }
+}
+
+.container-fluid.facts {
+    background:#555555;
+}
+
+.main-facts {
+    background:#555555;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    padding: 70px 30px;
+}
+
+.facts-title {
+    font-family: 'Exo', sans-serif;
+    grid-row: 1/2;
+    grid-column: 1/4;
+    color: #f15a24;
+    border-bottom: 2px solid #f15a24;
+    margin-bottom: 20px;
+}
+
+.facts-description {
+    font-family: 'Exo', sans-serif;
+    font-weight: 300;
+    grid-row: 2/3;
+    grid-column: 1/5;
+    color: white;
+    margin-right: 10px;
+}
+
+.fact-box {
+    font-family: 'Exo', sans-serif;
+    background:#F15A24;
+    color: white;
+    padding: 10px;
+    margin-right: 10px;
+
+    &.fact1 {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    &.fact2 {
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+    &.fact3 {
+        grid-row: 3/4;
+        grid-column: 3/4;
+    }
+    &.fact4 {
+        grid-row: 3/4;
+        grid-column: 4/5;
+    }
+}
+
+.fact-img {
+    grid-row: 2/4;
+    grid-column: 6/9;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lets-start {
+    background: #00000099;
+    padding: 120px 30px;
+   
+}
+
+.start-title,
+.start-text {
+    color: white;
+}
+
+.start-title {
+    font-family: 'Exo', sans-serif;
+    font-size: 36px;
+}
+
+.start-text {
+    margin: 50px 0;
+    font-size: 18px;
+    font-family: 'Exo', sans-serif;
+    font-weight: 300;
+}
+
+.btn.golden {
+    background:#F15A24;
+    border-color: #F15A24;
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.btn.golden:hover {
+    background: #b53c10;
+}
+
+.btn.golden.main {
+    font-size: 18px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    width: 170px;
+}
+
+// Category
+
+.category-banner {
+    background:  #F15A24;
+}
+
+.page-title.cat,
+.page-title.cal-program {
+    margin-bottom: 40px;
+}
+
+.btn.grey {
+    width: 20%;
+    background:#6c757d;
+    color: white;
+
+    &:hover {
+        background:#3f3e3e;
+    }
+
+    &.cal-program {
+        width: 100%;
+    }
+}
+
+.btn.cat:hover {
+    background: #3f3e3e;
+}
+
+.btn.dark-grey {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+
+    &:hover {
+        background: #3f3e3e;
+    }
+}
+
+.cal-top-banner {
+    font-family: 'Exo', sans-serif;
+    font-weight: 300;
+    color: white;
+    background: #292929;
+    padding: 70px 30px;
+}
+
+.cal-benefits-li,
+.cal-level-li {
+    margin-left: 5px;
+}
+
+.cal-benefits,
+.cal-level {
+    margin-right: 5px;
+}
+
+.fa-check {
+    font-size: 14px;
+}
+
+.card.cal-levels {
+    background: #292929;
+    border: 2px solid #605e5e;
+    padding: 10px;
+}
+
+.cal-prog-banner {
+    background: #F15A24;
+}
+
+// Choose Category
+
+.category-subtitle {
+    color: white;
+}
+
+.container-fluid.category {
+    height: 300px;
+}
+
+.container-category {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.card-category {
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 10px;
+}
+
+.card-title {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+}
+
+.card-title.category {
+    
+}
+
+.title-underline {
+    border-top: 1px solid #F15A24;
+}
+
+.img-fluid.img-category-left,
+.img-fluid.img-category-right {
+    height: 287px;
+    object-fit: cover;
+}
+
+.img-category-left {
+    border-radius: 10px 0 0 10px;
+}
+
+.img-category-right {
+    border-radius: 0 10px 10px 0;
+}
+
+.card.cat {
+    margin: 20px 10px;
+    border: none;
+}
+
+// Calisthenics Programs
+
+.cal-prog-title {
+    color: white;
+    font-family: 'Exo', sans-serif;
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.title-grey {
+    color: #292929;
+}
+
+.loading-row {
+    background: #3f3e3e;
+}
+
+.loading-row-main {
+    background: #3f3e3e;
+    margin-top: 250px;
+}
+
+.loading-col {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+
+    h3 {
+        // font-size: 20px;
+    }
+}
+
+
+.card.cal-program {
+    margin: 20px 0;
+}
+
+.card-title.program {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.cal-card-title {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.card-level {
+    margin-left: 20px;
+}
+
+.img-cal-type {
+    height: 200px;
+    object-fit: cover;
+}
+
+.show-more {
+    padding-top: 20px;
+    padding-bottom: 30px;
+
+    p {
+        color: #212529;
+        margin-bottom: 10px;
+
+        // &:hover {
+        //     color: white;
+        //     cursor: pointer;
+        // }
+    }
+}
+
+.fa-chevron-circle-down {
+    color: #212529;
+    font-size: 28px;
+
+        &:hover {
+        color: white;
+        cursor: pointer;
+    }
+}
+
+// Cal popups
+
+.modal.fade.cal {
+    overflow: auto;
+}
+
+.modal.fade.cal::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-content.cal {
+    max-width: 1000px;
+    margin: 10px auto;
+    background: #f8f9fa;
+}
+
+.fa-caret-square-right {
+    color: #f15a24;
+}
+
+.modal-header.cal {
+    padding-bottom: 20px;
+}
+
+.cal-popup-name {
+    font-weight: 600;
+    font-family: 'Exo', sans-serif;
+}
+
+.modal-title.cal {
+    color: #f15a24;
+}
+
+.cal-popup-title {
+    font-weight: 600;
+    padding-left: 20px;
+
+    &.ex {
+        margin-bottom: 20px;
+    }
+}
+
+.cal-popup-descr {
+    padding-left: 20px;
+}
+
+.card-title.cal {
+    font-weight: 500;
+    color: #f15a24;
+}
+
+.card-text.cal {
+    font-weight: 600;
+}
+
+.card.cal-popup {
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.img-cal-popup {
+    // width: 100%;
+    // height: 100%;
+    // object-fit: cover;
+    max-height: 240px;
+    border-radius: 0 5px 5px 0;
+    padding: 20px 20px 20px 0;
+}
+
+
+
+// New Tracker
+
+.date-form {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.tracker-date-form {
+    font-size: 18px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.tracker-date-input {
+    border: 2px solid #adb5bd;
+    color: #495057;
+}
+
+.new-tracker {
+    background:white;
+}
+
+.tracker-table {
+    border-radius: 10px;
+}
+
+.table-head {
+    font-size: 18px;
+    padding: 10px 0;
+    font-weight: 600;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.table-row-wrapper {
+    padding: 15px 0px 7px;
+    border-radius: 5px;
+    background: #dee2e6;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.tracker-number {
+    color: white;
+    font-weight: 600;
+    background:#f15a24;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.sets-wrap {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 10px 15px 10px 0;
+    margin-bottom: 8px;
+}
+
+table {
+    background: #F15A24;
+}
+
+.add-set a,
+.add-new-ex a {
+    color: #F15A24;
+}
+
+.add-set {
+    line-height: 10px;
+    
+    a {
+        font-size: 11px;
+    }
+}
+
+.add-input {
+    background: #f8f9fa;
+    border: 2px solid#adb5bd; 
+}
+
+.add-input::placeholder {
+    color: rgb(75, 73, 73);
+}
+
+.delete-set {
+    cursor: pointer;
+}
+
+.delete-ex {
+    background: #F15A24;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.add-new-ex {
+    padding-bottom: 10px;
+}
+
+.fa-times {
+    color: white;
+}
+
+.fa-times-circle {
+    color: #F15A24;
+    font-size: 18px;
+}
+
+.btn-tracker {
+    margin-left: 12px;
+    margin-bottom: 50px;
+    width: 23%;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.modal-body {
+    padding-top: 0;
+}
+
+.fa-calendar-check {
+    font-size: 36px;
+    color: #f15a24;
+}
+
+.link-orange {
+    color: #f15a24;
+
+    &:hover {
+        color: #b53c10;
+    }
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal.fade {
+    background: #000a;
+}
+
+.popup-saved-text {
+    font-size: 20px;
+    margin-top: 16px;
+    border-top: 2px solid #f15a24;
+    padding-top: 16px;
+}
+
+.pd10 {
+    padding: 10px;
+}
+
+// Footer
+
+.site-footer {
+    color: #afafaf;
+    background: black;
+    padding-top: 50px;
+}
+
+.footer-content {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    color:#F15A24;
+    font-family: 'Exo', sans-serif;
+}
+
+.footer-icon {
+    padding-right: 10px;
+}
+
+.footer-menu {
+    line-height: 2;
+    font-weight: 600;
+
+    a {
+        color: #afafaf;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.footer-contacts {
+    // border-left: 2px solid #f15a24;
+    // padding-left: 5px;
+    line-height: 2;
+}
+.contacts-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-copyright {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { 
+    
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+    .card-body.features {
+        height: 188px;
+    }
+
+    .main-facts {
+        padding: 100px 15px;
+    }
+
+    .fact-box {
+        max-width: 170px;
+    }
+
+    .start-text {
+        font-size: 20px;
+    }
+
+    .start-left,
+    .start-right {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    // Category
+    // .container-category {
+    //     max-width: 1200px;
+    // }
+
+    // Calisthenics
+    .cal-top-banner {
+        
+    }
+
+    .cal-cards-row {
+        
+    }
+
+    .img-cal-type {
+        height: 220px;
+    }
+}
+
